@@ -19,80 +19,101 @@
 }
 
 /* line 43, ../sass/screen.scss */
-body {
+html, body {
   height: 100% !important;
   background-color: #dddddd;
   color: #333333;
+  font-size: 12px;
+}
+
+/* line 49, ../sass/screen.scss */
+.container {
+  margin-top: 1em;
 }
 /* line 52, ../../../../../../var/lib/gems/1.9.1/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
-body:before, body:after {
+.container:before, .container:after {
   content: "";
   display: table;
 }
 /* line 56, ../../../../../../var/lib/gems/1.9.1/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
-body:after {
+.container:after {
   clear: both;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 header {
   font-family: leagueGothic, impact, fantasy;
   font-size: 2em;
+  border-bottom: 1px solid black;
 }
 
-/* line 53, ../sass/screen.scss */
-section {
-  font-family: junction, "myriad pro", arial, helvetica, sans-serif;
-  margin-top: 1em;
-  border-right: 1px dashed #000;
-  height: 100%;
-}
 /* line 58, ../sass/screen.scss */
-section > header {
+section, aside {
+  font-family: junction, "myriad pro", arial, helvetica, sans-serif;
+  border-left: 1px dashed #000;
+  height: 90%;
+}
+/* line 62, ../sass/screen.scss */
+section > header, aside > header {
   text-align: center;
   background-color: #222222;
   color: #cccccc;
+  margin-bottom: 1em;
 }
-
-/* line 64, ../sass/screen.scss */
-#main {
-  float: left;
-  width: 9.091%;
-  margin-left: 0%;
-  margin-right: -9.091%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  border-right: 1px dashed #000;
-}
-
 /* line 68, ../sass/screen.scss */
-#toDo {
-  float: left;
-  width: 18.182%;
-  margin-left: 9.091%;
-  margin-right: -27.273%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
+section > section > section, aside > section > section {
+  border: none;
 }
 
 /* line 72, ../sass/screen.scss */
+aside {
+  border: none;
+}
+/* line 74, ../sass/screen.scss */
+aside header {
+  background-color: #dddddd;
+  color: #333333;
+}
+
+/* line 79, ../sass/screen.scss */
+.task {
+  margin: 0 10px;
+  border: 1px solid #000;
+}
+/* line 82, ../sass/screen.scss */
+.task > article {
+  margin-top: .5em;
+}
+/* line 85, ../sass/screen.scss */
+.task > aside {
+  text-align: right;
+  font-size: .8em;
+  font-style: italic;
+}
+
+/* line 91, ../sass/screen.scss */
+#toDo {
+  float: left;
+  width: 20%;
+  margin-left: 20%;
+  margin-right: -40%;
+  padding-left: 0px;
+  padding-right: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 95, ../sass/screen.scss */
 #today {
   float: left;
-  width: 18.182%;
-  margin-left: 27.273%;
-  margin-right: -45.455%;
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: -60%;
+  padding-left: 0px;
+  padding-right: 0px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -100,14 +121,14 @@ section > header {
   word-wrap: break-word;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 #inProgress {
   float: left;
-  width: 18.182%;
-  margin-left: 45.455%;
-  margin-right: -63.636%;
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 20%;
+  margin-left: 60%;
+  margin-right: -80%;
+  padding-left: 0px;
+  padding-right: 0px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -115,14 +136,14 @@ section > header {
   word-wrap: break-word;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 #done {
   float: left;
-  width: 18.182%;
-  margin-left: 63.636%;
-  margin-right: -81.818%;
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 20%;
+  margin-left: 80%;
+  margin-right: -100%;
+  padding-left: 0px;
+  padding-right: 0px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -130,14 +151,14 @@ section > header {
   word-wrap: break-word;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 #stats {
   float: left;
-  width: 9.091%;
-  margin-left: 81.818%;
-  margin-right: -90.909%;
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: -20%;
+  padding-left: 0px;
+  padding-right: 0px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;

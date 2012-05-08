@@ -6,8 +6,8 @@
 //@import "compass/reset";
 @import "zen";
 
-$zen-gutter-width: 20px;
-$zen-column-count: 11;
+$zen-gutter-width: 0px;
+$zen-column-count: 10;
 
 //fonts
 @font-face {
@@ -40,47 +40,70 @@ $bg2: #222;
 $fg1: #333;
 $fg2: #CCC;
 
-body{
-	@include zen-grid-container;
+html,body{
 	height: 100% !important;
 	background-color: $bg1;
 	color: $fg1;
+	font-size: $baseSize
+}
+.container{
+	@include zen-grid-container;
+	margin-top: 1em;
 }
 header{
 	font-family: $headfont;
 	font-size: 2em;
+	border-bottom: 1px solid #000
 }
-section{
+section, aside{
 	font-family: $bodyfont;
-	margin-top: 1em;
-	border-right: 1px dashed #000;
-	height: 100%;
+	border-left: 1px dashed #000;
+	height: 90%;
 	&>header{
 		text-align: center;
 		background-color: $bg2;
 		color: $fg2;
+		margin-bottom: 1em;
+	}
+	&>section>section{
+		border: none;
 	}
 }
-#main{
-	@include zen-grid-item(1,1);
-	border-right: 1px dashed #000;
+aside{
+	border:none;
+	&header{
+		background-color: $bg1;
+		color: $fg1;
+	}
+}
+.task{
+	margin: 0 10px;
+	border: 1px solid #000;
+	&>article{
+		margin-top: .5em;
+	}
+	&>aside{
+		text-align: right;
+		font-size: .8em;
+		font-style: italic;
+	}
 }
 #toDo{
-	@include zen-grid-item(2,2);
+	@include zen-grid-item(2,3);
 }
 
 #today{
-	@include zen-grid-item(2,4);
+	@include zen-grid-item(2,5);
 }
 
 #inProgress{
-	@include zen-grid-item(2,6);
+	@include zen-grid-item(2,7);
 }
 
 #done{
-	@include zen-grid-item(2,8);
+	@include zen-grid-item(2,9);
 }
 
 #stats{
-	@include zen-grid-item(1,10);
+	@include zen-grid-item(2,1);
 }
