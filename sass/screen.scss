@@ -88,6 +88,13 @@ aside{
 		font-style: italic;
 	}
 }
+form.task{
+	border: none;
+	legend{
+		font-family: $headfont;
+		font-size: 2em;
+	}
+}
 #toDo{
 	@include zen-grid-item(2,3);
 }

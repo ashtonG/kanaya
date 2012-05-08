@@ -92,6 +92,16 @@ aside header {
 }
 
 /* line 91, ../sass/screen.scss */
+form.task {
+  border: none;
+}
+/* line 93, ../sass/screen.scss */
+form.task legend {
+  font-family: leagueGothic, impact, fantasy;
+  font-size: 2em;
+}
+
+/* line 98, ../sass/screen.scss */
 #toDo {
   float: left;
   width: 20%;
@@ -106,7 +116,7 @@ aside header {
   word-wrap: break-word;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 #today {
   float: left;
   width: 20%;
@@ -121,7 +131,7 @@ aside header {
   word-wrap: break-word;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 #inProgress {
   float: left;
   width: 20%;
@@ -136,7 +146,7 @@ aside header {
   word-wrap: break-word;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 #done {
   float: left;
   width: 20%;
@@ -151,7 +161,7 @@ aside header {
   word-wrap: break-word;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 #stats {
   float: left;
   width: 20%;
