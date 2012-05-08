@@ -2,67 +2,143 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* line 20, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-body {
-  line-height: 1;
-}
-
-/* line 22, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 24, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 26, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
+@font-face {
+  font-family: 'leagueGothic';
+  src: url("fonts/League_Gothic-webfont.eot");
+  src: url("fonts/League_Gothic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/League_Gothic-webfont.woff") format("woff"), url("fonts/League_Gothic-webfont.ttf") format("truetype"), url("fonts/League_Gothic-webfont.svg#junctionregularRegular") format("svg");
   font-weight: normal;
-  vertical-align: middle;
+  font-style: normal;
 }
 
-/* line 28, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
+@font-face {
+  font-family: 'junction';
+  src: url("fonts/Junction-webfont.eot");
+  src: url("fonts/Junction-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Junction-webfont.woff") format("woff"), url("fonts/Junction-webfont.ttf") format("truetype"), url("fonts/Junction-webfont.svg#junctionregularRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
-/* line 101, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
+
+/* line 41, ../sass/screen.scss */
+body {
+  height: 100% !important;
+  background-color: #dddddd;
+}
+/* line 52, ../../../../../../var/lib/gems/1.9.1/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+body:before, body:after {
   content: "";
-  content: none;
+  display: table;
+}
+/* line 56, ../../../../../../var/lib/gems/1.9.1/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+body:after {
+  clear: both;
 }
 
-/* line 30, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
+/* line 46, ../sass/screen.scss */
+header {
+  font-family: leagueGothic, impact, fantasy;
+  font-size: 2em;
 }
 
-/* line 114, ../../../../../../var/lib/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
+/* line 50, ../sass/screen.scss */
+section {
+  font-family: junction, "myriad pro", arial, helvetica, sans-serif;
+  margin-top: 1em;
+  border-right: 1px dashed #000;
+  height: 100%;
+}
+/* line 55, ../sass/screen.scss */
+section > header {
+  text-align: center;
+  background-color: #222222;
+}
+
+/* line 60, ../sass/screen.scss */
+#main {
+  float: left;
+  width: 9.091%;
+  margin-left: 0%;
+  margin-right: -9.091%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  border-right: 1px dashed #000;
+}
+
+/* line 64, ../sass/screen.scss */
+#toDo {
+  float: left;
+  width: 18.182%;
+  margin-left: 9.091%;
+  margin-right: -27.273%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 68, ../sass/screen.scss */
+#today {
+  float: left;
+  width: 18.182%;
+  margin-left: 27.273%;
+  margin-right: -45.455%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 72, ../sass/screen.scss */
+#inProgress {
+  float: left;
+  width: 18.182%;
+  margin-left: 45.455%;
+  margin-right: -63.636%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 76, ../sass/screen.scss */
+#done {
+  float: left;
+  width: 18.182%;
+  margin-left: 63.636%;
+  margin-right: -81.818%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 80, ../sass/screen.scss */
+#stats {
+  float: left;
+  width: 9.091%;
+  margin-left: 81.818%;
+  margin-right: -90.909%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
