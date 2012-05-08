@@ -18,10 +18,11 @@
   font-style: normal;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 body {
   height: 100% !important;
   background-color: #dddddd;
+  color: #333333;
 }
 /* line 52, ../../../../../../var/lib/gems/1.9.1/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 body:before, body:after {
@@ -33,26 +34,27 @@ body:after {
   clear: both;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 header {
   font-family: leagueGothic, impact, fantasy;
   font-size: 2em;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 section {
   font-family: junction, "myriad pro", arial, helvetica, sans-serif;
   margin-top: 1em;
   border-right: 1px dashed #000;
   height: 100%;
 }
-/* line 55, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 section > header {
   text-align: center;
   background-color: #222222;
+  color: #cccccc;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 #main {
   float: left;
   width: 9.091%;
@@ -68,7 +70,7 @@ section > header {
   border-right: 1px dashed #000;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 #toDo {
   float: left;
   width: 18.182%;
@@ -83,7 +85,7 @@ section > header {
   word-wrap: break-word;
 }
 
-/* line 68, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 #today {
   float: left;
   width: 18.182%;
@@ -98,7 +100,7 @@ section > header {
   word-wrap: break-word;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 #inProgress {
   float: left;
   width: 18.182%;
@@ -113,7 +115,7 @@ section > header {
   word-wrap: break-word;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #done {
   float: left;
   width: 18.182%;
@@ -128,7 +130,7 @@ section > header {
   word-wrap: break-word;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 #stats {
   float: left;
   width: 9.091%;

@@ -35,13 +35,16 @@ $zen-column-count: 11;
 $bodyfont: junction, "myriad pro", arial, helvetica, sans-serif;
 $headfont: leagueGothic, impact, fantasy;
 $baseSize: 12px;
-$bg1: #DDDDDD;
-$bg2: #222222;
+$bg1: #DDD;
+$bg2: #222;
+$fg1: #333;
+$fg2: #CCC;
 
 body{
 	@include zen-grid-container;
 	height: 100% !important;
 	background-color: $bg1;
+	color: $fg1;
 }
 header{
 	font-family: $headfont;
@@ -55,6 +58,7 @@ section{
 	&>header{
 		text-align: center;
 		background-color: $bg2;
+		color: $fg2;
 	}
 }
 #main{
