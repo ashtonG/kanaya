@@ -59,49 +59,67 @@ section > header, aside > header {
   background-color: #222222;
   color: #cccccc;
   margin-bottom: 1em;
+  padding-right: 5px;
 }
-/* line 68, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 section > section > section, aside > section > section {
   border: none;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 aside {
   border: none;
 }
-/* line 74, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 aside header {
   background-color: #dddddd;
   color: #333333;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
+.control {
+  float: right;
+  display: inline-block;
+}
+/* line 83, ../sass/screen.scss */
+.control > a {
+  text-decoration: none;
+  margin-left: 10px;
+  color: inherit;
+}
+
+/* line 89, ../sass/screen.scss */
 .task {
   margin: 0 10px;
   border: 1px solid #000;
 }
-/* line 82, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
+.task > header {
+  padding: 0 5px;
+}
+/* line 95, ../sass/screen.scss */
 .task > article {
   margin-top: .5em;
+  padding-left: 5px;
 }
-/* line 85, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .task > aside {
   text-align: right;
   font-size: .8em;
   font-style: italic;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 form.task {
   border: none;
 }
-/* line 93, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 form.task legend {
   font-family: leagueGothic, impact, fantasy;
   font-size: 2em;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 #toDo {
   float: left;
   width: 20%;
@@ -116,7 +134,7 @@ form.task legend {
   word-wrap: break-word;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 #today {
   float: left;
   width: 20%;
@@ -131,7 +149,7 @@ form.task legend {
   word-wrap: break-word;
 }
 
-/* line 106, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 #inProgress {
   float: left;
   width: 20%;
@@ -146,7 +164,7 @@ form.task legend {
   word-wrap: break-word;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 #done {
   float: left;
   width: 20%;
@@ -161,7 +179,7 @@ form.task legend {
   word-wrap: break-word;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 #stats {
   float: left;
   width: 20%;

@@ -64,6 +64,7 @@ section, aside{
 		background-color: $bg2;
 		color: $fg2;
 		margin-bottom: 1em;
+		padding-right: 5px;
 	}
 	&>section>section{
 		border: none;
@@ -76,11 +77,24 @@ aside{
 		color: $fg1;
 	}
 }
+.control{
+	float: right;
+	display: inline-block;
+	&>a{
+		text-decoration:none;
+		margin-left: 10px;
+		color: inherit;
+	}
+}
 .task{
 	margin: 0 10px;
 	border: 1px solid #000;
+	&>header{
+		padding: 0 5px;
+	}
 	&>article{
 		margin-top: .5em;
+		padding-left: 5px;
 	}
 	&>aside{
 		text-align: right;
