@@ -4,6 +4,7 @@
 	var labelText = document.createElement("legend");
 	var formName = document.createElement("input");
 	var formDesc = document.createElement("textarea");
+	var formDue = document.createElement("input");
 	var formTags = document.createElement("input");
 	var formSub = document.createElement("input");
 	createForm.className = "task"
@@ -11,6 +12,8 @@
 	formName.id = "name";
 	formName.type = "text";
 	formDesc.id = "desc";
+	formDue.id = "due";
+	formDue.type = "text";
 	formTags.id = "tags";
 	formTags.type = "text";
 	formSub.id = "save"
@@ -20,6 +23,7 @@
 	formLabel.appendChild(labelText);
 	formLabel.appendChild(formName);
 	formLabel.appendChild(formDesc);
+	formLabel.appendChild(formDue);
 	formLabel.appendChild(formTags);
 	formLabel.appendChild(formSub);
 //task template
@@ -29,16 +33,19 @@
 	var desc = document.createElement("article");
 	var tagEl = document.createElement("aside");
 	var cont = document.createElement("div");
+	var stat = document.createElement("div");
 	var mLeftL = document.createElement("a");
 	var rem = document.createElement("a");
 	var mRightL = document.createElement("a");
 	cont.className = "control";
+	stat.className = "stat";
 	mLeftL.href = rem.href  = mRightL.href = "#";
 	rem.textContent = "[-]";
 	cont.appendChild(mLeftL);
 	cont.appendChild(rem);
 	cont.appendChild(mRightL);
 	title.appendChild(cont);
+	title.appendChild(stat);
 	newTask.appendChild(title);
 	newTask.appendChild(desc);
 	newTask.appendChild(tagEl);
@@ -106,14 +113,16 @@ function task(title, desc, tags, stat){
 		this.disp();
 	}
 	this.disp = function(){
-		locTask = this;
+		locTask = this; 
 		var taskW = newTask.clone();
 		var index = taskW.index = this.index;
 		taskW.id = "task" + index;
 		taskW.getChildren()[0].appendText(this.title,"top");
 		taskW.getChildren()[1].textContent = this.description;
 		if(this.stat.finish != null && this.stat.loc == "done"){
-			taskW.getChildren()[1].textContent += " --Finished on " + this.stat.finish.toString();
+			taskW.getElements("div")[1].textContent = "Finished:" + this.stat.finish.toDateString();
+		} else if(this.stat.loc != "done" && this.stat.due != null){
+			taskW.getElements("div")[1].textContent = "Due " + this.stat.due.toDateString();
 		}
 		for (var tag=0;tag<this.tags.length;tag++){
 			taskW.getChildren()[2].textContent += this.tags[tag];
@@ -156,9 +165,13 @@ function addTask(id){
 				formDesc.value,
 				formTags.value.split(","),
 				{
-					"loc": id
+					"loc": id,
 				}
 				);
+		alert(formDue.value);
+		if(formDue.value !=""){
+			curT.stat.due = new Date(formDue.value);
+		}
 		$(id).getElement("section").removeChild(createForm);
 		curT.disp();
 	}
@@ -181,6 +194,9 @@ function loadTasks(){
 		if(tt!=null){
 			if(tt.stat.finish!=null){
 				tt.stat.finish = new Date(tt.stat.finish);
+			}
+			if(tt.stat.due !=null){
+				tt.stat.due = new Date(tt.stat.due);
 			}
 			var ct =new task(
 					tt.title,

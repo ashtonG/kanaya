@@ -89,37 +89,42 @@ aside header {
 }
 
 /* line 89, ../sass/screen.scss */
+.stat {
+  font-size: .5em;
+}
+
+/* line 92, ../sass/screen.scss */
 .task {
   margin: 0 10px;
   border: 1px solid #000;
 }
-/* line 92, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .task > header {
   padding: 0 5px;
 }
-/* line 95, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .task > article {
   margin-top: .5em;
   padding-left: 5px;
 }
-/* line 99, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .task > aside {
   text-align: right;
   font-size: .8em;
   font-style: italic;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 form.task {
   border: none;
 }
-/* line 107, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 form.task legend {
   font-family: leagueGothic, impact, fantasy;
   font-size: 2em;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 #toDo {
   float: left;
   width: 20%;
@@ -134,7 +139,7 @@ form.task legend {
   word-wrap: break-word;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #today {
   float: left;
   width: 20%;
@@ -149,7 +154,7 @@ form.task legend {
   word-wrap: break-word;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 #inProgress {
   float: left;
   width: 20%;
@@ -164,7 +169,7 @@ form.task legend {
   word-wrap: break-word;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 #done {
   float: left;
   width: 20%;
@@ -179,7 +184,7 @@ form.task legend {
   word-wrap: break-word;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 #stats {
   float: left;
   width: 20%;
